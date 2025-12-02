@@ -1,10 +1,5 @@
 use color_eyre::eyre::{Result, bail};
 
-enum Direction {
-    Left,
-    Right,
-}
-
 /// Parse line into offset
 fn parse_line(line: &str) -> Result<i32> {
     let (dir, offset) = line.split_at(1);
