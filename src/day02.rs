@@ -1,6 +1,8 @@
 use color_eyre::eyre::Result;
 use itertools::Itertools;
 
+use crate::fetch_input;
+
 /// Check if a number is "invalid" - made of some sequence of digits repeated twice
 /// e.g., 55 (5 twice), 6464 (64 twice), 123123 (123 twice)
 fn is_invalid(num: u64) -> bool {
@@ -73,12 +75,44 @@ fn part_2(input: &str) -> Result<u64> {
     Ok(invalid)
 }
 
-fn main() -> Result<()> {
-    color_eyre::install()?;
-    let input = include_str!("day02.txt");
+pub fn main() -> Result<()> {
+    let input = fetch_input(2)?;
 
-    dbg!(part_1(input)?);
-    dbg!(part_2(input)?);
+    dbg!(part_1(&input)?);
+    dbg!(part_2(&input)?);
 
     Ok(())
 }
+
+// #[cfg(test)]
+// mod tests {
+//     use super::*;
+
+//     const SAMPLE_INPUT: &str = "L68
+// L30
+// R48
+// L5
+// R60
+// L55
+// L1
+// L99
+// R14
+// L82
+// ";
+
+//     #[test]
+//     fn test_part_1() {
+//         let real_input = fetch_input(1).unwrap();
+
+//         assert_eq!(part_1(SAMPLE_INPUT).unwrap(), 3);
+//         assert_eq!(part_1(&real_input).unwrap(), 1147);
+//     }
+
+//     #[test]
+//     fn test_part_2() {
+//         let real_input = fetch_input(1).unwrap();
+
+//         assert_eq!(part_2(SAMPLE_INPUT).unwrap(), 6);
+//         assert_eq!(part_2(&real_input).unwrap(), 6789);
+//     }
+// }
