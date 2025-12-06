@@ -1,10 +1,15 @@
 #![feature(int_roundings)]
 #![feature(cmp_minmax)]
+#![feature(new_range_api)]
+#![feature(array_windows)]
 
 pub mod day01;
+pub mod day01_fast;
 pub mod day02;
 pub mod day03;
 pub mod day04;
+pub mod day05;
+pub mod day06;
 
 use std::path::PathBuf;
 
