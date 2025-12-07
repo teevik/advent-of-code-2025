@@ -125,10 +125,10 @@ fn part_2(input: &str) -> Result<usize> {
     Ok(total_sum)
 }
 
-const SAMPLE_INPUT: &str = "123 328  51 64 
- 45 64  387 23 
+const SAMPLE_INPUT: &str = "123 328  51 64
+ 45 64  387 23
   6 98  215 314
-*   +   *   +  
+*   +   *   +
 ";
 
 pub fn main() -> Result<()> {
