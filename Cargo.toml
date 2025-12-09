@@ -49,4 +49,10 @@ roots = "0.0.8"
 rustc-hash = { version = "2.1", features = ["nightly"] }
 smallvec = "1"
 t1ha = "0.1"
+vek = "0.17.2"
+ordered-float = "5.1.0"
+petgraph = "0.8.3"
+rstar = "0.12"
+geo = "0.29"
+good_lp = { version = "1.14", default-features = false, features = ["coin_cbc"] }
 #wgpu = "0.18"

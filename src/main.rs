@@ -3,7 +3,7 @@ use color_eyre::eyre::Result;
 
 fn main() -> Result<()> {
     color_eyre::install()?;
-    day07::main()?;
+    day10::main()?;
 
     Ok(())
 }
